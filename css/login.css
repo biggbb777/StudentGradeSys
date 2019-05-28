@@ -1,0 +1,14 @@
+body {
+  padding: 30px 0;
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin input {
+  margin-top: 6px;
+}
+.form-signin select {
+  margin-top: 6px;
+}
