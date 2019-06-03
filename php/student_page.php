@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>学生页面</title>
 </head>
 <body>
-    <h1>Hi!student</h1>
+<h1 class="text-primary">Hello,<?php echo $_COOKIE['stuName']; ?></h1>
 </body>
 </html>

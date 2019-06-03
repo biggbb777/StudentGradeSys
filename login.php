@@ -52,17 +52,23 @@
                 $data=mysqli_query($dbc,$query);
                 $row=mysqli_fetch_array($data);
                 if(mysqli_num_rows($data) >= 1){
+                      
                  //判断用户身份，跳转至相应页面
                       if($_POST['choice']=='option_std'){//学生
+                            setcookie('stuId', $row['stuId'], time() + (60 * 60 * 24 * 30));    // 保存30天
+                            setcookie('stuName', $row['stuName'], time() + (60 * 60 * 24 * 30));
                             $student_url = 'http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/php/student_page.php';
                             header('Location:'.$student_url);
                             //跳转页面
                       }
                       else if($_POST['choice']=='option_tea'){//教师
+                            setcookie('teaId', $row['teaId'], time() + (60 * 60 * 24 * 30));
+                            setcookie('teaName', $row['teaName'], time() + (60 * 60 * 24 * 30));
                             $teacher_url = 'http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/php/teacher_page.php';
                             header('Location:'.$teacher_url);
                       }
                       else if($_POST['choice']=='option_admin'){//管理员
+                        setcookie('id', $row['id'], time() + (60 * 60 * 24 * 30)); 
                         $admin_url = 'http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/php/admin_page.php';
                         header('Location:'.$admin_url);
                   }
