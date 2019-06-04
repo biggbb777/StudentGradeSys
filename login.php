@@ -57,6 +57,8 @@
                       if($_POST['choice']=='option_std'){//学生
                             setcookie('stuId', $row['stuId'], time() + (60 * 60 * 24 * 30));    // 保存30天
                             setcookie('stuName', $row['stuName'], time() + (60 * 60 * 24 * 30));
+                            setcookie('stuClass', $row['stuClass'], time() + (60 * 60 * 24 * 30));
+                            setcookie('stuSex', $row['stuSex'], time() + (60 * 60 * 24 * 30));
                             $student_url = 'http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/php/student_page.php';
                             header('Location:'.$student_url);
                             //跳转页面
