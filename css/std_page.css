@@ -1,2 +1,26 @@
 body {
+  background: url(../images/matese-fields-233175-unsplash.jpg);
+  text-align: center;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}
+.btn-lg {
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  font-family: inherit;
+  font-size: 70px;
+  border-radius: 10px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #ffffff;
+  background: #44c767;
+  padding: 12px 30px 12px 30px;
+  border: solid #18ab29 1px;
+  text-decoration: none;
 }

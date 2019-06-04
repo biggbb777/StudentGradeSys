@@ -9,13 +9,11 @@
     <form enctype="multipart/form-data" role="form" action="" method="post">
  		    <h1 class="text-primary">欢迎,<?php echo $_COOKIE['stuName']; ?>同学<span class="glyphicon glyphicon-magnet"></span></h1>
         <!-- 欢迎语句 -->
-        
+        <button type="submit" class="btn btn-primary home_button" name="home"><span class="glyphicon glyphicon-home"></span>&nbsp<br>回到首页</button>
+        <!-- 回到首页按钮功能 -->
         <div>
-            <dl>
-                <dt>学号:  <?php echo $_COOKIE['stuId'] ?></dt>
-                <dt>姓名:  <?php echo $_COOKIE['stuName'] ?></dt>
-                <dt>班级:  <?php echo $_COOKIE['stuClass'] ?>班</dt>
-                <dt>性别:  <?php 
+            <tr>
+                <td>学号:  <?php echo $_COOKIE['stuId'] ?>  姓名:  <?php echo $_COOKIE['stuName'] ?>  班级:  <?php echo $_COOKIE['stuClass'] ?>班  性别:  <?php 
                 if($_COOKIE['stuSex']=='M'){
                     echo '男';
                 }
@@ -23,11 +21,13 @@
                     echo '女';
                 }
                 ?></dt>
+                <dt></dt>
+                <dt></dt>
+                <dt></dt>
             </dl>
         </div>
-        <button type="submit" class="btn btn-primary home_button" name="home"><span class="glyphicon glyphicon-home"></span>&nbsp<br>回到首页</button>
-        <!-- 回到首页按钮功能 -->
-        <button type="submit" name="my_grade" class="btn btn-success big_button">
+        
+        <button type="submit" name="my_grade" class="btn btn-success btn-lg">
         <span class="glyphicon glyphicon-user"></span><br>我的成绩</button>
         <!-- 查看学生自己成绩模块 -->
         
