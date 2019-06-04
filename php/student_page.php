@@ -1,27 +1,16 @@
 
 <?php
-
+    require('dbConnection.php');
    //获取得到的账号和密码
     $id=$_COOKIE['user_id'];
     $paw=$_COOKIE['user_paw'];
-
-    // echo $id;
-
-//   define('DB_HOST', '127.0.0.1');
-//   define('DB_USER', 'root');
-//   define('DB_PASSWORD', '123456');
-//   define('DB_NAME', 'db_student_grade');
-
    //连接数据库
-   $dbc=mysqli_connect('127.0.0.1','root','123456','db_student_grade');
+   $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
    mysqli_query($dbc,'set names utf8');
 
    $query="SELECT * FROM stuinfo WHERE stuId = '$id' AND stuPaw='$paw'";
    $data=mysqli_query($dbc,$query);
    $row=mysqli_fetch_array($data);
-
-
-
     ?>
 
 <html lang="en">
@@ -79,7 +68,7 @@
         });
        // 个人信息页面
        $(".btnStyle2").click(function(){
-            window.location.href="studentinfo.php";
+            window.location.href="student_info.php";
         });
     });
 </script>
