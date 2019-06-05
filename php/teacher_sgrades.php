@@ -1,5 +1,4 @@
-
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,24 +12,12 @@
 
 
 <div style="padding: 100px 100px 10px;">
-    <h1>学生成绩查询</h1>
-    <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
+<form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
+    <h1><button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>学生成绩查询</h1>
     
-     <!-- 搜索输入框 -->   
-        <div class="row">
-        <button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp返回</button>
-			<div class="col-lg-6">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="请输入要查询学生的学号">
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">
-							Go!
+						<button type="submit" class="btn btn-default" type="button" name="search_grade">
+							点击查询单个学生的成绩
 						</button>
-            
-					</span>
-				</div>
-            </div>
-            
             <br><br><br>
             <h4>您所教授的的所有学生的成绩</h4>
            
@@ -38,17 +25,20 @@
 <table class="table table-bordered table-hover table-condensed">
         <thead>
  	        <tr>
+            <th>课程名称</th>
             <th>学号</th>
             <th>姓名</th>
             <th>班级</th>
-            <th>课程名称</th>
             <th>成绩</th>
  	        </tr>
  	      </thead>
  	      <tbody>
            <?php
             require('dbConnection.php');
-            require_once('go_back.php');
+            if(isset($_POST['back'])){
+              $url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/teacher_page.php';
+              header('Location:'.$url);
+            }
             $id=$_COOKIE['teaId'];
             $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
             mysqli_query($dbc,'set names utf8');
@@ -64,12 +54,16 @@
             $result=$dbc->query($search_grades);
             while($row=$result->fetch_assoc()){
               echo "<tr>
+              <td>".$row['courseName']."</td>
               <td>".$row['stuId']."</td>
               <td>".$row['stuName']."</td>
               <td>".$row['stuClass']."</td>
-              <td>".$row['courseName']."</td>
               <td>".$row['score']."</td>
               </tr>";
+            }
+            if(isset($_POST['search_grade'])){
+              $url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/search_student_grade.php';
+              header('Location:'.$url);
             }
           ?>
  	      </tbody>

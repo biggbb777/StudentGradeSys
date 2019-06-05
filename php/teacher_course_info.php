@@ -11,8 +11,8 @@
 
 <form enctype="multipart/form-data" role="form" action="" method="post">
 <div class="info" role="main">
-<button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp返回</button>
-<h1>课程及学生信息</h1>
+
+<h1><button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>课程及学生信息</h1>
 <table class="table table-bordered table-hover table-condensed">
  	      <thead>
  	        <tr>
@@ -33,7 +33,7 @@
 
                 // 查询一个教师所教授的课程及学生信息
                 $search_courses="SELECT DISTINCT courseinfo.courseId,courseinfo.courseName,stuinfo.stuId,stuinfo.stuName,stuinfo.stuClass,stuinfo.stuSex from selectcourse INNER JOIN courseinfo INNER JOIN stuinfo ON selectcourse.courseId=courseinfo.courseId and selectcourse.stuId=stuinfo.stuId WHERE teaId='$id'";
-                $result=$dbc->query($search_courses);
+                $result=$dbc->query($search_courses); 
                 while($row=$result->fetch_assoc()){
                     echo "<tr>
                     <td>".$row['courseId']."</td>
