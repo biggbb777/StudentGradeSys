@@ -1,0 +1,10 @@
+body {
+  background: url(../images/matese-fields-233175-unsplash.jpg);
+  text-align: center;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+}

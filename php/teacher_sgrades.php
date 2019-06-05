@@ -13,10 +13,12 @@
 
 
 <div style="padding: 100px 100px 10px;">
-    <p>学生成绩查询</p>
+    <h1>学生成绩查询</h1>
     <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
+    
      <!-- 搜索输入框 -->   
         <div class="row">
+        <button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp返回</button>
 			<div class="col-lg-6">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="请输入要查询学生的学号">
@@ -24,6 +26,7 @@
 						<button class="btn btn-default" type="button">
 							Go!
 						</button>
+            
 					</span>
 				</div>
             </div>
@@ -45,7 +48,7 @@
  	      <tbody>
            <?php
             require('dbConnection.php');
-            // require_once('go_back.php');
+            require_once('go_back.php');
             $id=$_COOKIE['teaId'];
             $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
             mysqli_query($dbc,'set names utf8');
@@ -70,11 +73,8 @@
             }
           ?>
  	      </tbody>
-         </table>
-         
+  </table>
         </div>
     </form>
-    
-   
 </body>
 </html>
