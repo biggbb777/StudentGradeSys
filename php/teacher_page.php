@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/teacher_page.css" rel="stylesheet">
+    <link href="../css/tea_page.css" rel="stylesheet">
     <title>教师端</title>
 </head>
 <body>
@@ -27,10 +27,12 @@
             header('Location:'.$search_url);
         }
 	?>
-        <h1 id="big_msg" class="text-primary">欢迎您,<?php echo $_COOKIE['teaName']; ?>老师<span class="glyphicon glyphicon-eye-open"></span>
-        <button type="submit" name="teacher_course_info" class="btn btn-warning big_button"><span class="glyphicon glyphicon-magnet"></span><br>我的课程</button>
-        <button type="submit" name="teacher_sgrades" class="btn btn-success big_button"><span class="glyphicon glyphicon-heart"></span><br>查询学生成绩</button>
-        <button type="submit" class="btn btn-primary home_button" name="home"><span class="glyphicon glyphicon-home"></span>&nbsp回到首页</button>
+        <h1 id="big_msg" class="text-primary">欢迎您,<?php echo $_COOKIE['teaName']; ?>老师<span class="glyphicon glyphicon-eye-open"></span><button type="submit" class="btn btn-primary home_button" name="home"><span class="glyphicon glyphicon-home"></span>&nbsp回到首页</button></h1> 
+        <br>
+        <br>
+        <button type="submit" name="teacher_course_info" class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-magnet"></span><br>课程学生信息</button>
+        <button type="submit" name="teacher_sgrades" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-list-alt"></span><br>查询学生成绩</button>
+        
     </form>
 </body>
 </html>

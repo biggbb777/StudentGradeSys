@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">    
-    <title>课程信息</title>
+    <title>课程及学生信息</title>
 </head>
 <body>
 
 <form enctype="multipart/form-data" role="form" action="" method="post">
 <div class="info" role="main">
 <button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp返回</button>
-<h1 align:center><?php echo $_COOKIE['teaName']?>老师，您现教授的课程及信息如下：</h1>
+<h1>课程及学生信息</h1>
 <table class="table table-bordered table-hover table-condensed">
  	      <thead>
  	        <tr>
