@@ -12,7 +12,7 @@
     
     <div style="padding: 100px 100px 10px;">
         <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
-        <h1><button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>录入成绩。</h1>
+        <h1><button type="submit" class="btn btn-primary" onclick="window.location.href='teacher_sgrades.php'"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>录入成绩。</h1>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="input-group">
@@ -30,10 +30,6 @@
         $id=$_COOKIE['teaId'];
         $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
         mysqli_query($dbc,'set names utf8'); 
-        if(isset($_POST['back'])){
-            $url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/teacher_sgrades.php';
-            header('Location:'.$url);
-        }
         if(isset($_POST['insert'])){
             
             $searchById=$_POST['search_stuid'];

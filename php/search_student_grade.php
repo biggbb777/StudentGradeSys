@@ -11,7 +11,7 @@
     <body>
     <div style="padding: 100px 100px 10px;">
     <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
-    <h1><button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>学生成绩查询</h1>
+    <h1><button type="submit" class="btn btn-primary" onclick="window.location.href='teacher_sgrades.php'"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>学生成绩查询</h1>
     
     
      <!-- 搜索输入框 -->   
@@ -19,7 +19,7 @@
         
 			<div class="col-lg-6">
 				<div class="input-group">
-					<input type="text" class="form-control" name="search_stuid" placeholder="请输入要查询学生的学号">
+					<input type="text" class="form-control" name="search_stuid" placeholder="请输入要查询学生的学号" required>
 					<span class="input-group-btn">
 						<button type="submit" class="btn btn-default" type="button" name="search_grade">
 							查询
@@ -33,10 +33,6 @@
  	      <tbody>
            <?php
             require('dbConnection.php');
-            if(isset($_POST['back'])){
-                $url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/teacher_sgrades.php';
-                header('Location:'.$url);
-            }
             $id=$_COOKIE['teaId'];
             $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
             mysqli_query($dbc,'set names utf8');       
