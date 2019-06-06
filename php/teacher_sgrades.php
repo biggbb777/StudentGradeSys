@@ -9,14 +9,15 @@
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
-
-
 <div style="padding: 100px 100px 10px;">
 <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
     <h1><button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>学生成绩查询</h1>
     
 						<button type="submit" class="btn btn-default" type="button" name="search_grade">
-							点击查询单个学生的成绩
+							点击查询学生成绩
+						</button>
+            <button type="submit" class="btn btn-default" type="button" name="insert_grades">
+							点击录入或修改学生成绩
 						</button>
             <br><br><br>
             <h4>您所教授的的所有学生的成绩</h4>
@@ -63,6 +64,10 @@
             }
             if(isset($_POST['search_grade'])){
               $url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/search_student_grade.php';
+              header('Location:'.$url);
+            }
+            if(isset($_POST['insert_grades'])){
+              $url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/insert_grades.php';
               header('Location:'.$url);
             }
           ?>

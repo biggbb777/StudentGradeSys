@@ -22,60 +22,27 @@
 					<input type="text" class="form-control" name="search_stuid" placeholder="请输入要查询学生的学号">
 					<span class="input-group-btn">
 						<button type="submit" class="btn btn-default" type="button" name="search_grade">
-							Go!
+							查询
 						</button>
-            
 					</span>
 				</div>
             </div>
 
 <table class="table table-bordered table-hover table-condensed">
-        <thead>
- 	        <tr>
-            <th>课程号</th>
-            <th>学号</th>
-            <th>姓名</th>
-            <th>班级</th>
-            <th>成绩</th>
- 	        </tr>
- 	      </thead>
+       
  	      <tbody>
            <?php
             require('dbConnection.php');
             if(isset($_POST['back'])){
                 $url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/teacher_sgrades.php';
                 header('Location:'.$url);
-              }
+            }
             $id=$_COOKIE['teaId'];
             $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
             mysqli_query($dbc,'set names utf8');       
             if(isset($_POST['search_grade'])){ 
-                $searchById=$_POST['search_stuid'];
-                $search_specific_grades=
-                "SELECT grades.courseId,stuinfo.stuid,stuname,stuClass,score
-                FROM stuinfo,grades,selectcourse 
-                WHERE stuinfo.stuid='".$searchById."' 
-                AND stuinfo.stuid=grades.stuid 
-                AND stuinfo.stuid=selectcourse.stuid
-                AND grades.courseid=selectcourse.courseid
-                AND selectcourse.teaId='".$_COOKIE['teaId']."';";
-                $data=mysqli_query($dbc,$search_specific_grades);
-                $row1=mysqli_fetch_array($data);
-                if(mysqli_num_rows($data)>=1){
-                    $result=$dbc->query($search_specific_grades); 
-                    while($row=$result->fetch_assoc()){
-                        echo "<tr>
-                            <td>".$row['courseId']."</td>
-                            <td>".$row['stuid']."</td>
-                            <td>".$row['stuname']."</td>
-                            <td>".$row['stuClass']."</td>
-                            <td>".$row['score']."</td>
-                        </tr>";
-                    }
-                }
-                else{
-                    echo '请输入正确学号!';
-                }
+                require_once('print_student_info.php');
+                
             }
           ?>
  	      </tbody>
