@@ -45,7 +45,7 @@
             <?php
             // 响应删除按钮
                 if(isset($_POST['delete_btn'])){
-                    require_once('a_delete_student.php');
+                    require_once('admin_delete_student.php');
                 }
             ?>
 </form>

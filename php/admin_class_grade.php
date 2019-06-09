@@ -49,7 +49,7 @@
                     if(isset($_POST['class_grades']))
                     {
                         // 在print_Oneclass_select_course.php页面进行操作
-                        require_once('a_print_Oneclass_grades.php');
+                        require_once('admin_print_oneclass_grades.php');
                     }
                     ?>
                 </tbody>

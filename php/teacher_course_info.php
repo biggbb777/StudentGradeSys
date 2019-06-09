@@ -1,32 +1,37 @@
 <!-- 教师端输出一个教师的所有学生的成绩页面 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <title>课程及学生信息</title>
-</head>
-<body>
-
-<form enctype="multipart/form-data" role="form" action="" method="post">
-<div class="info" role="main">
-
-<h1><button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>课程及学生信息</h1>
-<table class="table table-bordered table-hover table-condensed">
- 	      <thead>
- 	        <tr>
-             <th>编号</th>
-            <th>课程号</th>
-            <th>课程名</th>
-            <th>学号</th>
-            <th>姓名</th>
-            <th>班级</th>
- 	        </tr>
- 	      </thead>
- 	      <tbody>
-           <?php
+  </head>
+  <body>
+    <form enctype="multipart/form-data" role="form" action="" method="post">
+      <div class="info" role="main">
+        <h1>
+          <button type="submit" class="btn btn-primary" name="back">
+            <span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button
+          >课程及学生信息
+        </h1>
+        <table class="table table-bordered table-hover table-condensed">
+          <thead>
+            <tr>
+              <th>编号</th>
+              <th>课程号</th>
+              <th>课程名</th>
+              <th>学号</th>
+              <th>姓名</th>
+              <th>班级</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
                 // 引入数据库的一些定义
                 require('dbConnection.php');
                 // 返回上一页面
@@ -61,9 +66,9 @@
                 }
 
             ?>
- 	      </tbody>
- 	    </table>
- 	  </div>
-  </form>
-</body>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </body>
 </html>

@@ -35,7 +35,7 @@
                     if(isset($_POST['class_course']))
                     {
                         // 在print_Oneclass_select_course.php页面进行操作
-                        require('print_Oneclass_select_course.php');
+                        require('admin_print_oneclass_select_course.php');
                     }
                     ?>
                 </tbody>

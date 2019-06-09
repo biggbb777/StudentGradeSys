@@ -17,7 +17,6 @@
             </div>
 
             <?php
-
               //跳转到学生信息管理页面
                 if(isset($_POST['student_manage']))
                 {

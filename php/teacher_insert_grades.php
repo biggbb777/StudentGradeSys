@@ -31,7 +31,6 @@
         $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
         mysqli_query($dbc,'set names utf8'); 
         if(isset($_POST['insert'])){
-            
             $searchById=$_POST['search_stuid'];
             $search_specific_grades=
             "SELECT grades.courseId,stuinfo.stuid,stuname,stuClass,score

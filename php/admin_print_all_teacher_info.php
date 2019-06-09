@@ -1,6 +1,6 @@
 <?php
                         
-                            //查询所有教师的语句 
+     //查询所有教师的语句 
                             $search_all_teacher_infos=
                             "SELECT DISTINCT teainfo.teaId,teainfo.teaName,selectcourse.courseId,courseinfo.courseName,teainfo.teaSex 
                             FROM teainfo INNER JOIN selectcourse INNER JOIN courseinfo 
@@ -19,4 +19,4 @@
                                 </tr>";
                                 $number=$number+1;
                             }
-                        ?>
+?>

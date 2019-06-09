@@ -2,12 +2,12 @@
  <html>
  <head>
  	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../css/std_page.css">
+    <link rel="stylesheet" type="text/css" href="../css/std_page.css">
  	<title>学生端</title>
  </head>
  <body>
     <form enctype="multipart/form-data" role="form" action="" method="post">
- 		    <h1 class="text-primary">欢迎,<?php echo $_COOKIE['stuName']; ?>同学<span class="glyphicon glyphicon-magnet"></span></h1>
+ 		<h1 class="text-primary">欢迎,<?php echo $_COOKIE['stuName']; ?>同学<span class="glyphicon glyphicon-magnet"></span></h1>
         <!-- 欢迎语句 -->
         <button type="submit" class="btn btn-primary home_button" name="home"><span class="glyphicon glyphicon-home"></span>&nbsp<br>回到首页</button>
         <!-- 回到首页按钮功能 -->

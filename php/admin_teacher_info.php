@@ -30,7 +30,7 @@
 </form>
     <?php
         if(isset($_POST['all_teacher'])){
-            $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/print_all_teacher.php';
+            $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_print_all_teacher.php';
             header('Location:'.$home_url); 
         }
         if(isset($_POST['teacher_and_student'])){
