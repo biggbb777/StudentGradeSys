@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/admin_page.css">
     <title>管理员页面</title>
 </head>
 <body>
     <form enctype="multipart/form-data" role="form" action="" method="post">
         <h1>Hi!admin<?php echo $_COOKIE['id']; ?></h1>
             <div>
-            <button type="submit" name="teacher_manage">教师管理</button>
-            <button type="submit" name="student_manage">学生管理</button>
+            <button type="submit" name="teacher_manage" class="btn btn-primary btn-lg">教师管理</button>
+            <button type="submit" name="student_manage" class="btn btn-success btn-lg">学生管理</button>
             </div>
 
             <?php
