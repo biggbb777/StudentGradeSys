@@ -1,7 +1,9 @@
 
 <!-- 班级信息标签页内信息的输出 -->
 <?php
-    
+    require('dbConnection.php');
+    $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+    mysqli_query($dbc,'set names utf8');
     //获取选择的科目 
     $a_course=$_POST['course_choice'];    //获取科目选择的内容,course_choice是select的名字
     // 获取输入的班级

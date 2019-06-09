@@ -76,8 +76,7 @@
                   }
                 }
                 else{
-                      $error_msg='账号或密码不正确';
-                      echo '<p class="error">' . $error_msg . '</p>';
+                      echo "<script>alert('账号或密码不正确！');</script>";
                 }
           }
         }

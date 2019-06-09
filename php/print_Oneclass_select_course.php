@@ -2,7 +2,9 @@
 <!-- 响应admin_student_info.php页面的学生选课标签页,作用是输出一个班级的选课情况 -->
 
 <?php
-    
+    require('dbConnection.php');
+    $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+    mysqli_query($dbc,'set names utf8');
     // 获取输入的班级
     $a_class1=$_POST['select_class1'];    //获取input标签页内输入的班级,select_class是input标签的名字
 

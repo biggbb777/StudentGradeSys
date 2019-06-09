@@ -1,5 +1,8 @@
 <!-- 响应学生信息委会标签页的查询一个学生的所有信息 -->
 <?php
+    require('dbConnection.php');
+    $dbc=mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+    mysqli_query($dbc,'set names utf8');
         //获取输入的学号,stu_id是输入框的名字 
         $a_stuId=$_POST['stu_id'];
 
