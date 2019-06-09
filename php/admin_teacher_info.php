@@ -38,7 +38,7 @@
             header('Location:'.$home_url); 
         }
         if(isset($_POST['modify_teacher'])){
-            $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_modify_teacher.php';
+            $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_modify.php';
             header('Location:'.$home_url); 
         }
     ?>
