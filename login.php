@@ -46,8 +46,6 @@
                         AND password = '$user_password';
                   ";
             }
-               
-
         //获取数据
                 $data=mysqli_query($dbc,$query);
                 $row=mysqli_fetch_array($data);
@@ -80,6 +78,10 @@
                 }
           }
         }
+      if(isset($_POST['change_pwd'])){
+        $url = 'http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/php/change_my_pwd.php';
+        header('Location:'.$url);
+      }
   ?>
 
 
@@ -101,7 +103,6 @@
           name="userid"
           class="form-control"
           placeholder="用户名"
-          required
           autofocus
         />
         <input
@@ -110,8 +111,8 @@
           id="password"
           class="form-control"
           placeholder="密码"
-          required
         />
+        <input name="change_pwd" id="submit" class="btn btn-small btn-link btn-block" type="submit" value="修改密码"/>
         <input name="submit" id="submit" class="btn btn-lg btn-success btn-block" type="submit" value="登录"/>     
       </form>
     </div>
