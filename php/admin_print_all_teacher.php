@@ -13,7 +13,7 @@
     <div id="myTabContent" class="tab-content">
     <!-- 所有教师信息标签页:输出所有教师的信息 -->
         <h4 align="center" style="font-weight:bold">所有教师信息</h4>
-                <table class="table table-bordered table-hover table-condensed" align="center">
+                <table class="table table-hover table-condensed table-striped" align="center">
                         <tr>
                             <th>编号</th>
                             <th>教职工号</th>

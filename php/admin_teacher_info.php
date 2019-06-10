@@ -17,14 +17,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>教师信息管理</title>
 </head>
+<style>
+body{
+    
+    text-align: center;
+    margin: 0 auto;
+}
+</style>
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
-    <button type="submit" class="btn btn-default" type="button" name="all_teacher">全体教师信息</button>
-    <button type="submit" class="btn btn-default" type="button" name="teacher_and_student">查询教师的学生</button>
-    <button type="submit" class="btn btn-default" type="button" name="modify_teacher">维护教师信息</button>
+    <div class="container">
+        <h1>请选择功能：</h1>
+        <button type="submit" class="btn btn-primary btn-block" type="button" name="all_teacher">全体教师信息</button>
+        <button type="submit" class="btn btn-info btn-block" type="button" name="teacher_and_student">查询教师的学生</button>
+        <button type="submit" class="btn btn-success btn-block" type="button" name="modify_teacher">维护教师信息</button>
+    </div>
     
 </div>
 </form>
