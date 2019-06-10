@@ -17,23 +17,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>教师信息管理</title>
 </head>
-<style>
-body{
-    
-    text-align: center;
-    margin: 0 auto;
-}
-</style>
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/admin_teacher_info.css">
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
+    <button type="submit" class="btn btn-primary" name="back">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
+    </button>
     <div class="container">
-        <h1>请选择功能：</h1>
-        <button type="submit" class="btn btn-primary btn-block" type="button" name="all_teacher">全体教师信息</button>
-        <button type="submit" class="btn btn-info btn-block" type="button" name="teacher_and_student">查询教师的学生</button>
-        <button type="submit" class="btn btn-success btn-block" type="button" name="modify_teacher">维护教师信息</button>
+        
+        <button type="submit" class="btn btn-primary btn-lg" type="button" name="all_teacher">全体教师信息</button>
+        <button type="submit" class="btn btn-info btn-lg" type="button" name="teacher_and_student">查询教师学生</button>
+        <button type="submit" class="btn btn-success btn-lg" type="button" name="modify_teacher">维护教师信息</button>
     </div>
     
 </div>
@@ -49,6 +46,10 @@ body{
         }
         if(isset($_POST['modify_teacher'])){
             $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_modify.php';
+            header('Location:'.$home_url); 
+        }
+        if(isset($_POST['back'])){
+            $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_page.php';
             header('Location:'.$home_url); 
         }
     ?>

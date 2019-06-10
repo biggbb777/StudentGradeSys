@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,7 +92,6 @@
 
     <div class="container">
       <form class="form-signin" id="form-test" enctype="multipart/form-data" action="" method="post">
-        <h2>请登录。</h2>
         <select name="choice" class="form-control">
           <option value="option_std">学生</option>
           <option value="option_tea">教师</option>
