@@ -14,14 +14,28 @@
     <title>学生信息管理</title>
 </head>
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/admin_page.css">
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    .btn-lg{
+        margin-top: 150px;
+        width: 280px;
+        height: 320px;
+        font-size: 40px;
+    }
+</style>
 <body>
     <form enctype="multipart/form-data" role="form" action="" method="post">
-        <button type="submit" class="btn btn-default" type="button" name="all_student">全体学生信息</button>
-        <button type="submit" class="btn btn-default" type="button" name="student_course">学生选课表</button>
-        <button type="submit" class="btn btn-default" type="button" name="class_grade">班级成绩信息</button>
-        <button type="submit" class="btn btn-default" type="button" name="student_modify">学生信息维护</button>
+    <button type="submit" class="btn btn-primary" name="back">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
+    </button>
+    <div class="container">
+        <button type="submit" class="btn btn-primary btn-lg" type="button" name="all_student">全体学生信息</button>
+        <button type="submit" class="btn btn-success btn-lg" type="button" name="student_course">学生选课表</button>
+        <button type="submit" class="btn btn-warning btn-lg" type="button" name="class_grade">班级成绩信息</button>
+        <button type="submit" class="btn btn-info btn-lg" type="button" name="student_modify">学生信息维护</button>
+    </div>
     </form>
     <?php
         if(isset($_POST['all_student'])){
@@ -38,6 +52,10 @@
         }
         if(isset($_POST['student_modify'])){
             $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_student_modify.php';
+            header('Location:'.$home_url); 
+        }
+        if(isset($_POST['back'])){
+            $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_page.php';
             header('Location:'.$home_url); 
         }
     ?>

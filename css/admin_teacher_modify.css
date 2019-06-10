@@ -8,9 +8,6 @@ body {
   -o-background-size: cover;
   background-position: center 0;
 }
-h1 {
-  color: whitesmoke;
-}
 .btn-lg {
   margin: auto;
   margin-top: 90px;

@@ -10,6 +10,7 @@
 </head>
 <body>
     <form enctype="multipart/form-data" role="form" action="" method="post">
+    <button type="submit" class="btn btn-primary home_button" name="home"><span class="glyphicon glyphicon-home"></span>&nbsp<br>回到首页</button>
         <h1>Hi! Admin:<?php echo $_COOKIE['id']; ?></h1>
             <div>
             <button type="submit" name="teacher_manage" class="btn btn-primary btn-lg">教师管理</button>
@@ -30,6 +31,11 @@
                     // 
                     $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_info.php';
                     header('Location:'.$home_url); 
+                }
+                if(isset($_POST['home']))
+                {//跳转至登录页面
+                    $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/../login.php';
+                    header('Location:'.$home_url);      
                 }
             ?>
     </form>
