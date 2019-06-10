@@ -7,7 +7,7 @@
 <body>
 	<form enctype="multipart/form-data" role="form" action="" method="post">
 	  <div class="info" role="main">
- 	    <table class="table table-bordered table-hover table-condensed">
+ 	    <table class="table table-hover table-condensed table-striped">
         <h2 class="text-info" id="cap"><span class="glyphicon glyphicon-list-alt"></span><?php echo $_COOKIE['stuName']?>同学的成绩单</h2>
         <button type="submit" class="btn btn-primary" name="back"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp返回</button>
  	      <thead>

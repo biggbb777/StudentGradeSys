@@ -43,7 +43,7 @@
       </button>
       <br /><br /><br />
       <h4>您所教授的的所有学生的成绩</h4>
-      <table class="table table-bordered table-hover table-condensed">
+      <table class="table table-hover table-condensed table-striped">
         <thead>
           <tr>
             <th>编号</th>

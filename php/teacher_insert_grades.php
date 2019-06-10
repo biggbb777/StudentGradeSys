@@ -23,7 +23,7 @@
                 </div>
             </div>
         </form>
-    <table class="table table-bordered table-hover table-condensed">
+    <table class="table table-hover table-condensed table-striped">
        <tbody>
     <?php
         require('dbConnection.php');
@@ -54,7 +54,7 @@
                     mysqli_query($dbc,$query2);
                     echo "<script>alert('录入成功!');</script>"; 
                     echo "<h3>这是您刚才录入的成绩:</h3>";
-                    require_once('print_student_info.php');
+                    require_once('teacher_print_student_info.php');
                 }
             }
             else{

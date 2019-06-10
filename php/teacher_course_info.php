@@ -19,7 +19,7 @@
             <span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button
           >课程及学生信息
         </h1>
-        <table class="table table-bordered table-hover table-condensed">
+        <table class="table table-hover table-condensed table-striped">
           <thead>
             <tr>
               <th>编号</th>

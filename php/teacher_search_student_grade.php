@@ -12,7 +12,7 @@
   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <body>
-  <div style="padding: 100px 100px 10px;">
+  <div class="container">
     <form
       class="bs-example bs-example-form"
       enctype="multipart/form-data"
@@ -20,7 +20,7 @@
       action=""
       method="post"
     >
-      <h1>
+      <h2>
         <button
           type="submit"
           class="btn btn-primary"
@@ -28,11 +28,11 @@
         >
           <span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button
         >学生成绩查询
-      </h1>
+      </h2>
 
       <!-- 搜索输入框 -->
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-center-block">
           <div class="input-group">
             <input
               type="text"
@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <table class="table table-bordered table-hover table-condensed">
+        <table class="table table-hover table-condensed table-striped">
           <tbody>
             <?php
                 require('dbConnection.php');

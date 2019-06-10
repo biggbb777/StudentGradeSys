@@ -10,7 +10,7 @@
 </head>
 <body>
     <form enctype="multipart/form-data" role="form" action="" method="post">
-        <h1>Hi!admin<?php echo $_COOKIE['id']; ?></h1>
+        <h1>Hi! Admin:<?php echo $_COOKIE['id']; ?></h1>
             <div>
             <button type="submit" name="teacher_manage" class="btn btn-primary btn-lg">教师管理</button>
             <button type="submit" name="student_manage" class="btn btn-success btn-lg">学生管理</button>
