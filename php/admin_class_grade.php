@@ -10,9 +10,11 @@
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
-<h2>学生成绩信息</h2>
-        <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
-                    
+<form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
+<button type="submit" class="btn btn-primary" name="back">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
+</button>  
+<h2>学生成绩信息</h2> 
             <!-- 科目选择 -->
             <select name="course_choice" class="form-control">
             <option value="C01">语文</option>
@@ -45,7 +47,11 @@
                         // 在print_Oneclass_select_course.php页面进行操作
                         require_once('admin_print_oneclass_grades.php');
                     }
-                    ?>
+                    if(isset($_POST['back'])){
+                        $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_student_info.php';
+                        header('Location:'.$home_url); 
+                    }
+                ?>
                 </tbody>
             </table>
 </body>

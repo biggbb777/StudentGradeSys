@@ -14,10 +14,13 @@
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
+<button type="submit" class="btn btn-primary" name="back">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
+</button>  
 <h2>删除学生信息</h2>
          <!-- 搜索输入框 -->
                    <!-- 输入框的名字是stu_id用于a_search_student.php中获取输入的学号 -->
-    <input type="text" class="form-control" name="stu_id" placeholder="先输入删除的学生学号核对后再删除..." required>
+    <input type="text" class="form-control" name="stu_id" placeholder="先输入删除的学生学号核对后再删除...">
             <!-- 此按钮的功能是删除查找出来的学生信息,按钮的name是delete_btn -->
             <br>
     <button type="submit" name="delete_btn" class="btn btn-danger">删除</button>
@@ -25,6 +28,10 @@
             // 响应删除按钮
                 if(isset($_POST['delete_btn'])){
                     require_once('admin_delete_student.php');
+                }
+                if(isset($_POST['back'])){
+                    $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_student_info.php';
+                    header('Location:'.$home_url); 
                 }
             ?>
 </form>

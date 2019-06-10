@@ -14,8 +14,10 @@
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
-  
-            <h2>删除教师</h2>
+<button type="submit" class="btn btn-primary" name="back">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
+</button>
+    <h2>删除教师</h2>
             <input
               type="text"
               class="form-control"
@@ -39,6 +41,10 @@
         mysqli_query($dbc,'set names utf8');
         if(isset($_POST['delete_teacher'])){
             require_once('admin_delete_teacher.php');
+        }
+        if(isset($_POST['back'])){
+          $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_modify.php';
+          header('Location:'.$home_url); 
         }
     ?>
 </body>

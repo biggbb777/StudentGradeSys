@@ -14,13 +14,16 @@
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
+<button type="submit" class="btn btn-primary" name="back">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
+</button>
 <h2>增加教师信息</h2>
                 <!-- 增加教师基本信息 -->
-                <input type="text" class="form-control" name="add_tea_id" placeholder="教职工号..." required>
+                <input type="text" class="form-control" name="add_tea_id" placeholder="教职工号..." >
                 <!-- <br> -->
-                <input type="text" class="form-control" name="add_tea_name" placeholder="教师姓名..." required>
+                <input type="text" class="form-control" name="add_tea_name" placeholder="教师姓名...">
                 <br>
-                <input type="text" class="form-control" name="add_tea_sex" placeholder="教师性别..." required>
+                <input type="text" class="form-control" name="add_tea_sex" placeholder="教师性别...">
                 <br>
                 <!-- 添加信息按钮 -->
                 <button id="add" type="submit" class="btn btn-success" type="button" name="add_teacher">添加</button>
@@ -28,6 +31,10 @@
                 if(isset($_POST['add_teacher'])){
                     // 执行添加教师信息
                     require_once('admin_insert_teacher.php');
+                }
+                if(isset($_POST['back'])){
+                    $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_modify.php';
+                    header('Location:'.$home_url); 
                 }
                 ?>
 </form>
