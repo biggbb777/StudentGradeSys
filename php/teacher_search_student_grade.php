@@ -54,6 +54,8 @@
           </div>
         </div>
 
+        <br>
+        <br>
         <table class="table table-hover table-condensed table-striped">
           <tbody>
             <?php

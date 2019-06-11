@@ -23,6 +23,11 @@
             <input type="text" class="form-control" name="search_stuid" placeholder="请输入学生的学号" required>
             <input type="text" class="form-control" name="insert_grade" placeholder="请输入成绩" required>
             <br>
+            <br>
+            <!-- 录入按钮 -->
+            <button type="submit" class="btn btn-primary" type="button" name="insert">录入
+            </button>
+            <br>
         </form>
     <table class="table table-hover table-condensed table-striped">
        <tbody>

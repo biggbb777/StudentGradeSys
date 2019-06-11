@@ -14,10 +14,13 @@
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
-<button type="submit" class="btn btn-primary" name="back">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
-</button>
-    <h2>删除教师</h2>
+
+    <h2>
+      <button type="submit" class="btn btn-primary" name="back">
+          <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
+      </button>
+      删除教师
+    </h2>
             <input
               type="text"
               class="form-control"

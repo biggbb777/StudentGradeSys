@@ -7,7 +7,15 @@ mysqli_query($dbc,'set names utf8');
 $add_stuId=$_POST['add_stu_id'];
 $add_stuName=$_POST['add_stu_name'];
 $add_stuClass=$_POST['add_stu_class'];
-$add_stuSex=$_POST['add_stu_sex'];
+if($_POST['student_choice_sex']=='option_M')
+{
+    $add_stuSex='M';
+}
+if($_POST['student_choice_sex']=='option_F')
+{
+    $add_stuSex='F';
+}
+// $add_stuSex=$_POST['add_stu_sex'];
 $add_stuPaw='123456';
 
 //查询插入的学号是否存在

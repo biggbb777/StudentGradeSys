@@ -14,17 +14,22 @@
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
-<button type="submit" class="btn btn-primary" name="back">
+
+    <h2>
+    <button type="submit" class="btn btn-primary" name="back">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
-</button>  
-<h2>增加学生信息</h2>
+    </button>  
+    增加学生信息</h2>
                 <!-- 增加学生基本信息 -->
         <input type="text" class="form-control" name="add_stu_id" placeholder="学生学号...">
                 <!-- <br> -->
         <input type="text" class="form-control" name="add_stu_name" placeholder="姓名...">
         <input type="text" class="form-control" name="add_stu_class" placeholder="班级...">
-                <!-- <br> -->
-        <input type="text" class="form-control" name="add_stu_sex" placeholder="性别...">
+        <select name="srydent_choice_sex" class="form-control">
+            <option value="option_M">男</option>
+            <option value="option_F">女</option>
+        </select>
+        <!-- <input type="text" class="form-control" name="add_stu_sex" placeholder="性别..."> -->
             <br>
                 <!-- 添加信息按钮 -->
         <button id="add" type="submit" class="btn btn-primary" type="button" name="add_student">添加</button>

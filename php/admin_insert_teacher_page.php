@@ -14,14 +14,23 @@
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
-<button type="submit" class="btn btn-primary" name="back">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
-</button>
-<h2>增加教师信息</h2>
+
+    <h2>
+        <button type="submit" class="btn btn-primary" name="back">
+                <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
+        </button>
+    增加教师信息
+    </h2>
                 <!-- 增加教师基本信息 -->
                 <input type="text" class="form-control" name="add_tea_id" placeholder="教职工号..." >
                 <input type="text" class="form-control" name="add_tea_name" placeholder="教师姓名...">
-                <input type="text" class="form-control" name="add_tea_sex" placeholder="教师性别...">
+
+                <select name="teacher_choice_sex" class="form-control">
+                    <option value="option_M">男</option>
+                    <option value="option_F">女</option>
+                </select>
+                <!-- <input type="text" class="form-control" name="add_tea_sex" placeholder="教师性别..."> -->
+                <br>
                 <!-- 添加信息按钮 -->
                 <button id="add" type="submit" class="btn btn-success" type="button" name="add_teacher">添加</button>
                 <?php

@@ -14,10 +14,12 @@
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form enctype="multipart/form-data" role="form" action="" method="post">
-<button type="submit" class="btn btn-primary" name="back">
+  
+    <h2>
+    <button type="submit" class="btn btn-primary" name="back">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
-</button>  
-<h2>删除学生信息</h2>
+    </button>
+    删除学生信息</h2>
          <!-- 搜索输入框 -->
                    <!-- 输入框的名字是stu_id用于a_search_student.php中获取输入的学号 -->
     <input type="text" class="form-control" name="stu_id" placeholder="先输入删除的学生学号核对后再删除...">
