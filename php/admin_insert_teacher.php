@@ -7,7 +7,15 @@ mysqli_query($dbc,'set names utf8');
 // 获取输入教师的基本信息
 $add_teaId=$_POST['add_tea_id'];
 $add_teaName=$_POST['add_tea_name'];
-$add_teaSex=$_POST['add_tea_sex'];
+if($_POST['teacher_choice_sex']=='option_M')
+{
+    $add_teaSex='M';
+}
+if($_POST['teacher_choice_sex']=='option_F')
+{
+    $add_teaSex='F';
+}
+// $add_teaSex=$_POST['add_tea_sex'];
 $add_teaPaw='123456';
 
 //查询插入的教职工号是否存在

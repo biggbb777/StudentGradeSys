@@ -4,24 +4,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="../css/admin_teacher_and_student.css">
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>录入或修改学生成绩</title>
 </head>
 <body>
     
-    <div style="padding: 100px 100px 10px;">
+    <!-- <div style="padding: 100px 100px 10px;"> -->
         <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
-        <h1><button type="submit" class="btn btn-primary" onclick="window.location.href='teacher_sgrades.php'"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>录入成绩。</h1>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="search_stuid" placeholder="请输入学生的学号" required>
-                        <input type="text" class="form-control" name="insert_grade" placeholder="请输入成绩" required>
-                        <button type="submit" class="btn btn-default" type="button" name="insert">录入</button>
-                    </div>
-                </div>
-            </div>
+            <h1>
+                <button type="submit" class="btn btn-primary" onclick="window.location.href='teacher_sgrades.php'">
+                    <span class="glyphicon glyphicon-arrow-left">
+                    </span>&nbsp
+                </button>录入成绩
+            </h1>
+
+            <input type="text" class="form-control" name="search_stuid" placeholder="请输入学生的学号" required>
+            <input type="text" class="form-control" name="insert_grade" placeholder="请输入成绩" required>
+            <br>
         </form>
     <table class="table table-hover table-condensed table-striped">
        <tbody>
@@ -65,7 +66,6 @@
     ?>
         </tbody>
     </table>
-    </div>
     
 </body>
 </html>

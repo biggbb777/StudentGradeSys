@@ -15,35 +15,40 @@
   
   <body>
     <form enctype="multipart/form-data" role="form" action="" method="post">
+      
+      <h2>
       <button type="submit" class="btn btn-primary" name="back">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
-      </button>
-      <h2>教师所教的学生名单</h2>
-            <!-- 输入教师的ID查找该教师所教的学生信息  search_teaId是输入框的名字 -->
-            <input
-              type="text"
-              class="form-control"
-              name="search_teaId"
-              placeholder="请输入教职工ID..."
-              autofocus
-            />
-            <!-- 这里可以输入查询的班级,也可以查询所有的学生,查询一个班级时输入对应的班级号,查询所有学生是输入ALL进行查询,search_class输入框的名字 -->
-            <input
-              type="text"
-              class="form-control"
-              name="search_class"
-              placeholder="班级ID(查询所有时输入ALL)..."
-            />
-            <br>
-            <!-- 进行查询的按钮  search是该按钮的name,用于下面php的响应 -->
-            <button
-              type="submit"
-              class="btn btn-primary"
-              type="button"
-              name="search"
-            >
-              查询
-            </button>
+      </button>  
+      教师所教的学生名单
+      </h2>
+        <!-- 输入教师的ID查找该教师所教的学生信息  search_teaId是输入框的名字 -->
+        <input
+          type="text"
+          class="form-control"
+          name="search_teaId"
+          placeholder="请输入教职工ID..."
+          autofocus
+        />
+        <!-- 这里可以输入查询的班级,也可以查询所有的学生,查询一个班级时输入对应的班级号,查询所有学生是输入ALL进行查询,search_class输入框的名字 -->
+        <input
+          type="text"
+          class="form-control"
+          name="search_class"
+          placeholder="班级ID(查询所有时输入ALL)..."
+        />
+        <br>
+        <!-- 进行查询的按钮  search是该按钮的name,用于下面php的响应 -->
+        <button
+          type="submit"
+          class="btn btn-primary"
+          type="button"
+          name="search"
+        >
+          查询
+        </button>
+        <br>
+        <br>
       <table
         class="table table-bordered table-hover table-condensed"
         align="center"

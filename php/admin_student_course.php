@@ -11,10 +11,12 @@
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
-<button type="submit" class="btn btn-primary" name="back">
+
+    <h2>
+    <button type="submit" class="btn btn-primary" name="back">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
-</button>  
-<h2>学生选课表</h2>
+    </button>      
+    学生选课表</h2>
         
                         <!-- 输入标签的name是select_class1,用于print_Oneclass_select_course.php文件中获取输入的班级 -->
             <input type="text" class="form-control" name="select_class1" placeholder="请输入要查询的班级...">

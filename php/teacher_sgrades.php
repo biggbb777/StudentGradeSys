@@ -9,6 +9,7 @@
     rel="stylesheet"
     href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
   />
+  <link rel="stylesheet" href="../css/admin_teacher_and_student.css">
   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <body>
@@ -27,7 +28,7 @@
 
       <button
         type="submit"
-        class="btn btn-default"
+        class="btn btn-info"
         type="button"
         name="search_grade"
       >
@@ -35,13 +36,13 @@
       </button>
       <button
         type="submit"
-        class="btn btn-default"
+        class="btn btn-warning"
         type="button"
         name="insert_grades"
       >
         点击录入或修改学生成绩
       </button>
-      <br /><br /><br />
+      <br /><br />
       <h4>您所教授的的所有学生的成绩</h4>
       <table class="table table-hover table-condensed table-striped">
         <thead>

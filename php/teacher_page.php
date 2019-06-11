@@ -25,7 +25,15 @@
         }
         
 	?>
-        <h1 id="big_msg" class="text-primary">欢迎您,<?php echo $_COOKIE['teaName']; ?>老师<span class="glyphicon glyphicon-eye-open"></span><button type="submit" class="btn btn-primary home_button" name="home"><span class="glyphicon glyphicon-home"></span>&nbsp回到首页</button></h1> 
+        <h1 id="big_msg" class="text-primary">
+            欢迎您,<?php echo $_COOKIE['teaName']; ?>老师
+            <span class="glyphicon glyphicon-eye-open"></span>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary home_button" name="home">
+                <span class="glyphicon glyphicon-home"></span>&nbsp回到首页
+            </button>
+        </h1> 
         <br>
         <br>
         <button type="submit" name="teacher_course_info" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-magnet"></span><br>课程学生信息</button>

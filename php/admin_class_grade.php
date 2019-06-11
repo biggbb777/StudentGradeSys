@@ -11,21 +11,24 @@
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 <form class="bs-example bs-example-form" enctype="multipart/form-data" role="form" action="" method="post">
-<button type="submit" class="btn btn-primary" name="back">
+ 
+    <h2>
+    <button type="submit" class="btn btn-primary" name="back">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
-</button>  
-<h2>学生成绩信息</h2> 
+    </button>     
+    学生成绩信息
+    </h2> 
             <!-- 科目选择 -->
             <select name="course_choice" class="form-control">
-            <option value="C01">语文</option>
-            <option value="M01">数学</option>
-            <option value="E01">英语</option>
-            <option value="P01">物理</option>
-            <option value="C02">化学</option>
-            <option value="B01">生物</option>
-            <option value="P02">政治</option>
-            <option value="G02">地理</option>
-            <option value="H01">历史</option>
+                <option value="C01">语文</option>
+                <option value="M01">数学</option>
+                <option value="E01">英语</option>
+                <option value="P01">物理</option>
+                <option value="C02">化学</option>
+                <option value="B01">生物</option>
+                <option value="P02">政治</option>
+                <option value="G02">地理</option>
+                <option value="H01">历史</option>
             </select>
         
             <!-- 搜索输入框 -->
