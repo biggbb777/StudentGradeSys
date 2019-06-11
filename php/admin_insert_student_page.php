@@ -35,7 +35,7 @@
                 require_once('admin_insert_student.php');
             }
             if(isset($_POST['back'])){
-                $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_student_info.php';
+                $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_student_modify.php';
                 header('Location:'.$home_url); 
             }
             ?>
