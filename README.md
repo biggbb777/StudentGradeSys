@@ -1,3 +1,15 @@
+# 效果展示
+![image](<https://github.com/biggbb777/StudentGradeSys/blob/master/images/login_page.png>)
+
+![image](<https://github.com/biggbb777/StudentGradeSys/blob/master/images/student_page.png>)
+
+![image](<https://github.com/biggbb777/StudentGradeSys/blob/master/images/teacher_page.png>)
+
+![image](<https://github.com/biggbb777/StudentGradeSys/blob/master/images/admin_page2.png>)
+
+![image](<https://github.com/biggbb777/StudentGradeSys/blob/master/images/admin_page.png>)
+
+
 # 目标与工作日志
 
 ## 目标
