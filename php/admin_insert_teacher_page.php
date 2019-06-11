@@ -20,11 +20,8 @@
 <h2>增加教师信息</h2>
                 <!-- 增加教师基本信息 -->
                 <input type="text" class="form-control" name="add_tea_id" placeholder="教职工号..." >
-                <!-- <br> -->
                 <input type="text" class="form-control" name="add_tea_name" placeholder="教师姓名...">
-                <br>
                 <input type="text" class="form-control" name="add_tea_sex" placeholder="教师性别...">
-                <br>
                 <!-- 添加信息按钮 -->
                 <button id="add" type="submit" class="btn btn-success" type="button" name="add_teacher">添加</button>
                 <?php

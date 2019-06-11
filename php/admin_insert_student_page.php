@@ -22,7 +22,6 @@
         <input type="text" class="form-control" name="add_stu_id" placeholder="学生学号...">
                 <!-- <br> -->
         <input type="text" class="form-control" name="add_stu_name" placeholder="姓名...">
-                <br>
         <input type="text" class="form-control" name="add_stu_class" placeholder="班级...">
                 <!-- <br> -->
         <input type="text" class="form-control" name="add_stu_sex" placeholder="性别...">
