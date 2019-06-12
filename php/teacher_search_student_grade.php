@@ -26,8 +26,7 @@
           class="btn btn-primary"
           onclick="window.location.href='teacher_sgrades.php'"
         >
-          <span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button
-        >学生成绩查询
+          <span class="glyphicon glyphicon-arrow-left"></span>&nbsp</button>学生成绩查询
       </h2>
 
       <!-- 搜索输入框 -->

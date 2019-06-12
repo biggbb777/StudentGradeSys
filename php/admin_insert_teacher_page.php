@@ -13,17 +13,21 @@
   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
-<form enctype="multipart/form-data" role="form" action="" method="post">
-
-    <h2>
-        <button type="submit" class="btn btn-primary" name="back">
+<h2>
+    <button
+          class="btn btn-primary"
+          onclick="window.location.href='admin_teacher_modify.php'"
+        >
                 <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
         </button>
     增加教师信息
     </h2>
+<form enctype="multipart/form-data" role="form" action="" method="post">
+
+    
                 <!-- 增加教师基本信息 -->
-                <input type="text" class="form-control" name="add_tea_id" placeholder="教职工号..." >
-                <input type="text" class="form-control" name="add_tea_name" placeholder="教师姓名...">
+                <input type="text" class="form-control" name="add_tea_id" placeholder="教职工号..." required>
+                <input type="text" class="form-control" name="add_tea_name" placeholder="教师姓名..." required>
 
                 <select name="teacher_choice_sex" class="form-control">
                     <option value="option_M">男</option>
@@ -38,10 +42,10 @@
                     // 执行添加教师信息
                     require_once('admin_insert_teacher.php');
                 }
-                if(isset($_POST['back'])){
-                    $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_modify.php';
-                    header('Location:'.$home_url); 
-                }
+                // if(isset($_POST['back'])){
+                //     $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_modify.php';
+                //     header('Location:'.$home_url); 
+                // }
                 ?>
 </form>
 </body>

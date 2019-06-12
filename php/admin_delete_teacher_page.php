@@ -13,19 +13,23 @@
   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
-<form enctype="multipart/form-data" role="form" action="" method="post">
-
-    <h2>
-      <button type="submit" class="btn btn-primary" name="back">
+<h2>
+      <button  class="btn btn-primary"
+      onclick="window.location.href='admin_teacher_modify.php'"
+      >
           <span class="glyphicon glyphicon-arrow-left"></span>&nbsp
       </button>
       删除教师
     </h2>
+<form enctype="multipart/form-data" role="form" action="" method="post">
+
+    
             <input
               type="text"
               class="form-control"
               name="tea_id"
               placeholder="输入工号"
+            required
             />
             <br>
               <button
@@ -45,10 +49,10 @@
         if(isset($_POST['delete_teacher'])){
             require_once('admin_delete_teacher.php');
         }
-        if(isset($_POST['back'])){
-          $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_modify.php';
-          header('Location:'.$home_url); 
-        }
+        // if(isset($_POST['back'])){
+        //   $home_url='http://'. $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/admin_teacher_modify.php';
+        //   header('Location:'.$home_url); 
+        // }
     ?>
 </body>
 </html>
